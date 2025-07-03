@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "263193895653",
+    "project_id": "glory-rescue-pet",
+    "storage_bucket": "glory-rescue-pet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263193895653:android:01528accf0d72c0fd26a0c",
+        "android_client_info": {
+          "package_name": "com.example.gloryrescuepetapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDonnHvGGLD3JObDCJIJEEeKzZyo5qTVFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

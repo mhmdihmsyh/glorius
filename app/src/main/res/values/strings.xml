@@ -1,0 +1,31 @@
+<resources>
+    <!-- Aplikasi -->
+    <string name="app_name">Glory Rescue Pet App</string>
+
+    <!-- Header & Logo -->
+    <string name="rescuepet">RescuePet</string>
+    <string name="rescuepet_logo">Logo RescuePet</string>
+    <string name="ic_pets_desc">Ikon hewan peliharaan RescuePet</string>
+
+    <!-- Menu -->
+    <string name="beranda">Beranda</string>
+    <string name="posting_hewan">+ Posting Hewan</string>
+    <string name="profile">Profile</string>
+    <string name="keluar">Keluar</string>
+
+    <!-- Konten -->
+    <string name="pilih_kategori">PILIH KATEGORI</string>
+
+    <!-- Social Media -->
+    <string name="social_media">Social Media</string>
+
+    <!-- Hewan -->
+    <string name="kategori_anjing">Anjing</string>
+    <string name="kategori_kucing">Kucing</string>
+
+    <!-- Tips -->
+    <string name="tips_dan_panduan">Tips dan Panduan</string>
+    <string name="isi_tips">Pastikan hewan yang ingin diadopsi telah divaksin, sehat, dan cocok dengan lingkungan barumu.</string>
+    <string name="tutup">Tutup</string>
+
+</resources>

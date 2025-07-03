@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/blue_primary"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_pets"
+                app:tint="@color/white"
+                android:contentDescription="@string/ic_pets_desc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rescuepet"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Menu Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/blue_primary"
+            android:paddingVertical="12dp">
+
+            <Button
+                android:id="@+id/btnBeranda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textSize="10sp"
+                android:backgroundTint="@color/blue_primary"
+                android:text="@string/beranda"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnPosting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:textSize="10sp"
+                android:backgroundTint="@color/orange"
+                android:text="@string/posting_hewan"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textSize="10sp"
+                android:text="@string/profile"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue_primary" />
+
+            <Button
+                android:id="@+id/btnKeluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:backgroundTint="@color/blue_primary"
+                android:text="@string/keluar"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- PILIH KATEGORI -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:cardElevation="80dp"
+                android:layout_gravity="center"
+                android:text="PILIH KATEGORI" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Gambar Anjing dan Kucing -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/cream"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/imgDog"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/dog_image"
+                android:background="@drawable/rounded_card_bg"
+                android:elevation="6dp" />
+
+            <ImageView
+                android:id="@+id/imgCat"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/cat_image"
+                android:background="@drawable/rounded_card_bg"
+                android:elevation="6dp" />
+        </LinearLayout>
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/footer_bg"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center"
+            android:layout_marginTop="219dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/social_media"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_instagram"
+                    android:contentDescription="@string/rescuepet_logo" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_twitter"
+                    android:contentDescription="@string/rescuepet_logo" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_facebook"
+                    android:contentDescription="@string/rescuepet_logo" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
