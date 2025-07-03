@@ -28,4 +28,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tutup" />
+
+    <Button
+        android:id="@+id/btnTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/isi_tips"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
 </LinearLayout>

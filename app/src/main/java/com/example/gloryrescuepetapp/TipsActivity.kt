@@ -12,7 +12,7 @@ class TipsActivity : AppCompatActivity() {
         setContentView(R.layout.tips_activity) // Layout utama Activity
 
         // Ganti dengan ID tombol yang benar dari tips_activity.xml
-        val btnTips = findViewById<Button>(R.id.)
+        val btnTips = findViewById<Button>(R.id.btnTips)
 
         btnTips.setOnClickListener {
             // Menampilkan layout pop-up yang terpisah
