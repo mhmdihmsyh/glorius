@@ -2,17 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="24dp"
-    android:layout_margin="50dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/blue_light"
     android:gravity="center">
 
     <TextView
         android:id="@+id/tvTipsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/blue_light"
         android:text="@string/tips_dan_panduan"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -30,5 +27,5 @@
         android:id="@+id/btnClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selengkapnya" />
+        android:text="@string/tutup" />
 </LinearLayout>
