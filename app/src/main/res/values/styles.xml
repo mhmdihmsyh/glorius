@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Style bawaan atau lainnya di sini -->
+
+    <!-- Tambahkan ini di bagian bawah -->
+    <style name="FormInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_border</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+
+    <style name="NavButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+
+</resources>

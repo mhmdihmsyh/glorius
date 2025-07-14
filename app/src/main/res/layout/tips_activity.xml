@@ -15,12 +15,14 @@
         android:text="@string/tips_dan_panduan"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginBottom="12dp" />
 
     <TextView
         android:id="@+id/tvTipsContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:text="@string/isi_tips"
         android:textSize="16sp"
         android:layout_marginBottom="16dp" />

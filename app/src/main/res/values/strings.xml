@@ -28,4 +28,10 @@
     <string name="isi_tips">Pastikan hewan yang ingin diadopsi telah divaksin, sehat, dan cocok dengan lingkungan barumu.</string>
     <string name="tutup">Tutup</string>
 
+    <!-- Form Adopsi -->
+    <string name="form_title">Formulir Adopsi Hewan</string>
+    <string name="hint_nama">Nama Lengkap</string>
+    <string name="hint_email">Email</string>
+
+
 </resources>

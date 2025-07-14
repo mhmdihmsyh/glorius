@@ -7,17 +7,25 @@
       </SelectionState>
       <SelectionState runConfigName="BerandaActivity (1)">
         <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2025-07-07T05:40:04.746589700Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=44c892b2" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="BerandaActivity">
+      <SelectionState runConfigName="BerandaActivity (3)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="TipsActivity (1)">
+      <SelectionState runConfigName="FormAdopsiActivity">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="TipsActivity (2)">
+      <SelectionState runConfigName="CariHewanTerdekat">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="BerandaActivity (2)">
+      <SelectionState runConfigName="CariHewanTerdekat (1)">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>
