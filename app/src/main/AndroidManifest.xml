@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.gloryrescuepetapp">
 
-    <!-- ✅ Izin Akses Lokasi, Internet, dan Jaringan -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <!-- ✅ Perangkat harus punya GPS -->
     <uses-feature android:name="android.hardware.location.gps" android:required="true" />
 
     <application
@@ -24,7 +22,6 @@
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/data_extraction_rules">
 
-        <!-- ✅ Konfigurasi Firebase -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_notif" />
@@ -41,7 +38,6 @@
             android:name="firebase_crashlytics_collection_enabled"
             android:value="true" />
 
-        <!-- ✅ Service untuk menerima notifikasi Firebase -->
         <service
             android:name="com.google.firebase.messaging.FirebaseMessagingService"
             android:exported="false">
@@ -50,7 +46,6 @@
             </intent-filter>
         </service>
 
-        <!-- ✅ Daftar Aktivitas -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -69,6 +64,9 @@
         <activity android:name=".CariHewanTerdekat" android:exported="true" />
         <activity
             android:name="com.example.gloryrescuepetapp.ui.main.FormAdopsiActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.gloryrescuepetapp.ui.main.HewanHilangActivity"
             android:exported="true" />
 
     </application>

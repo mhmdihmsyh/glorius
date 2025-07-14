@@ -67,6 +67,12 @@ dependencies {
 
     // Lottie (untuk animasi JSON)
     implementation("com.airbnb.android:lottie:6.4.0")
+    // OkHttp untuk HTTP request ke Supabase
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+// Kotlin Coroutines untuk background tasks
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
 
     // Testing
     testImplementation("junit:junit:4.13.2")

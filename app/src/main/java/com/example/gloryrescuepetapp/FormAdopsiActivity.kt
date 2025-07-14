@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gloryrescuepetapp.*
+import com.google.firebase.firestore.FirebaseFirestore
 
 class FormAdopsiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,17 +33,14 @@ class FormAdopsiActivity : AppCompatActivity() {
         val btnPosting = findViewById<Button>(R.id.btnPosting)
         val btnKeluar = findViewById<Button>(R.id.btnKeluar)
 
-        // Navigasi ke halaman beranda
         btnBeranda?.setOnClickListener {
             startActivity(Intent(this, BerandaActivity::class.java))
         }
 
-        // Navigasi ke halaman posting
         btnPosting?.setOnClickListener {
             startActivity(Intent(this, PostingHewanActivity::class.java))
         }
 
-        // Logout ke halaman login
         btnKeluar?.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -50,19 +48,58 @@ class FormAdopsiActivity : AppCompatActivity() {
             finish()
         }
 
-        // Set jenis hewan jika tersedia
         if (jenis.isNotEmpty()) {
             inputJenisHewan.setText(jenis)
             judulForm.text = "Formulir Adopsi $jenis"
         }
 
-        // Tombol Ajukan
         btnAjukan.setOnClickListener {
-            Toast.makeText(this, "Permohonan adopsi berhasil dikirim!", Toast.LENGTH_SHORT).show()
-            // Tambahkan pengiriman ke Firebase/server jika diperlukan
+            val nama = inputNama.text.toString().trim()
+            val email = inputEmail.text.toString().trim()
+            val whatsapp = inputWhatsapp.text.toString().trim()
+            val kota = inputKota.text.toString().trim()
+            val jenisHewan = inputJenisHewan.text.toString().trim()
+            val namaHewan = inputNamaHewan.text.toString().trim()
+            val alasan = inputAlasan.text.toString().trim()
+            val pengalaman = inputPengalaman.text.toString().trim()
+
+            if (nama.isEmpty() || email.isEmpty() || whatsapp.isEmpty() || kota.isEmpty() ||
+                jenisHewan.isEmpty() || namaHewan.isEmpty() || alasan.isEmpty() || pengalaman.isEmpty()) {
+                Toast.makeText(this, "Harap lengkapi semua kolom.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val data = hashMapOf(
+                "nama" to nama,
+                "email" to email,
+                "whatsapp" to whatsapp,
+                "kota" to kota,
+                "jenis_hewan" to jenisHewan,
+                "nama_hewan" to namaHewan,
+                "alasan" to alasan,
+                "pengalaman" to pengalaman,
+                "timestamp" to System.currentTimeMillis()
+            )
+
+            val db = FirebaseFirestore.getInstance()
+            db.collection("permohonan_adopsi")
+                .add(data)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Permohonan adopsi berhasil dikirim!", Toast.LENGTH_LONG).show()
+                    inputNama.text.clear()
+                    inputEmail.text.clear()
+                    inputWhatsapp.text.clear()
+                    inputKota.text.clear()
+                    inputJenisHewan.text.clear()
+                    inputNamaHewan.text.clear()
+                    inputAlasan.text.clear()
+                    inputPengalaman.text.clear()
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Gagal mengirim data: ${e.message}", Toast.LENGTH_LONG).show()
+                }
         }
 
-        // Tombol Reset
         btnReset.setOnClickListener {
             inputNama.text.clear()
             inputEmail.text.clear()
